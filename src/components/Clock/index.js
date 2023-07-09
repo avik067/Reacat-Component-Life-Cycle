@@ -7,7 +7,6 @@ class Clock extends Component {
     super(props)
     this.state = {date: new Date()}
   }
-
   componentDidMount = () => {
     console.log('Component Mount is triggered')
     this.timerId = setInterval(this.tick, 1000)
@@ -17,7 +16,6 @@ class Clock extends Component {
     console.log('component is unmount')
     clearInterval(this.timerId)
   }
-
   tick = () => {
     this.setState({date: new Date()})
   }
